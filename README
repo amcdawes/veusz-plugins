@@ -1,0 +1,7 @@
+A collection of useful plugins for the veusz plotting software.
+
+To install plugins, navigate to the preferences, plugins tab. Add the plugin file to the list and (perhaps) restart veusz.
+
+List of plugins located here:
+
+tek_import.py -- a plugin useful for importing CSV files from tektronix oscilloscopes. This file format is generated on the scope (saved to usb drive) or via their computer-control software.
