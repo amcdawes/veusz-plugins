@@ -21,24 +21,6 @@ class ImportPluginExample(ImportPlugin):
                              editable=False, default="1")
             ]
 
-    def OlddoImport(self, params):
-        """Actually import data
-        params is a ImportPluginParams object.
-        Return a list of ImportDataset1D, ImportDataset2D objects
-        """
-
-        f = params.openFileWithEncoding()
-        data = []
-        xvals = []
-        yvals = []
-        chans = int(params.field_results["channels"])
-        column_indeces = [3,4]
-        for line in f:
-            xvals.append(line.split(",")[3])
-            yvals.append(line.split(",")[4])
-        return [ImportDataset1D("ch1x", xvals),
-        ImportDataset1D("ch1y", yvals)]
-
     def doImport(self, params):
         """Actually import data
         params is a ImportPluginParams object.
